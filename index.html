@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Empowering Digital Marketing and Entrepreneurship</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ngoBrown: {
+                            50: '#fdfbf7',
+                            100: '#f7f0e6',
+                            200: '#eddcc5',
+                            400: '#d9a752',
+                            500: '#c2882b', /* Primary Logo Brown */
+                            600: '#a36f1e',
+                            700: '#825517',
+                            800: '#644114',
+                            900: '#472d0d',
+                        },
+                        ngoBlue: {
+                            50: '#eff6ff',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Title -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img 
+                        src="logo.png" 
+                        alt="FEDME Foundation Logo" 
+                        class="h-16 w-auto object-contain transition-transform group-hover:scale-105"
+                    />
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-ngoBrown-700 font-bold">Foundation for</span>
+                        <h1 class="text-sm sm:text-base font-extrabold text-slate-900 leading-tight">Empowering Digital Marketing & Entrepreneurship</h1>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                    <a href="#about" class="hover:text-ngoBrown-700 transition">About Trust</a>
+                    <a href="#initiatives" class="hover:text-ngoBrown-700 transition">Our Projects</a>
+                     <a href="#contact" class="px-4 py-2 bg-ngoBrown-700 hover:bg-ngoBrown-800 text-white rounded-lg font-semibold shadow-sm transition">Contact Us</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-ngoBrown-700 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-ngoBrown-700">About Trust</a>
+            <a href="#initiatives" class="block py-2 text-slate-700 font-medium hover:text-ngoBrown-700">Our Programs</a>
+            <a href="#contact" class="block text-center py-2 bg-ngoBrown-700 text-white rounded-lg font-semibold shadow-sm">CONTACT US</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative text-white py-20 lg:py-28 overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('bg1.jpg');">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-ngoBrown-700/60 text-ngoBrown-200 border border-ngoBrown-500/40 backdrop-blur-sm">
+                        <i class="fa-solid fa-shield-halved mr-2"></i> Registered under Trust Act 1882 (Reg. No. 339)
+                    </span>
+                    
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                        Building Self-Reliant Communities Through <span class="text-ngoBrown-400">Innovation & Skill Empowering</span>
+                    </h2>
+                    
+                    <p class="text-slate-200 text-base sm:text-lg leading-relaxed">
+                        Building healthier, educated, nutritionally secure, and empowered communities. Inspiring future changes through digital literacy, and sustainable socio-economic interventions.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#initiatives" class="px-6 py-3.5 bg-ngoBrown-500 hover:bg-ngoBrown-600 text-white font-semibold rounded-xl shadow-lg transition flex items-center">
+                            Explore Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#objectives" class="px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-xl backdrop-blur-sm transition">
+                            Our Objectives
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Glassmorphism Card -->
+                <div class="lg:col-span-5 hidden lg:block">
+                    <div class="bg-slate-900/60 backdrop-blur-md p-4 rounded-3xl border border-white/20 shadow-2xl overflow-hidden text-center">
+                        <img 
+                            src="hero.png" 
+                            alt="FEDME Foundation Community Impact" 
+                            class="w-full h-80 object-cover rounded-2xl shadow-md"
+                        />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed About Us Section -->
+<section id="about" class="py-20 bg-slate-50 relative overflow-hidden">
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-ngoBrown-100/60 rounded-full blur-3xl -z-0"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-ngoBlue-50/60 rounded-full blur-3xl -z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+            <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-ngoBrown-100 text-ngoBrown-800 border border-ngoBrown-200">
+                <i class="fa-solid fa-building-columns mr-2"></i> Who We Are
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-600 tracking-tight">
+                Driving Digital Empowerment & Entrepreneurship for a Self-Reliant India
+            </h2>
+            <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-medium">
+                The <strong class="text-slate-900 font-bold">Foundation for Empowering Digital Marketing and Entrepreneurship (FEDME)</strong> is a legally registered Public Charitable Trust (Reg. No. 339) committed to creating sustainable, scalable, and meaningful impact across society.
+            </p>
+        </div>
+
+        <!-- Purpose & Image Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch mb-16">
+            <!-- Left Column (Text Box) -->
+            <div class="lg:col-span-7 flex">
+                <div class="bg-sky-100/90 p-8 sm:p-10 rounded-3xl border border-sky-200 shadow-sm space-y-5 w-full flex flex-col justify-center">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center">
+                        <i class="fa-solid fa-heart-pulse text-ngoBrown-600 mr-3"></i> 
+                        Our Purpose & Dedication
+                    </h3>
+                    <p class="text-slate-700 leading-relaxed text-base">
+                        We believe that true national progress begins at the grassroots level when every individual has access to modern healthcare, proper nutrition, and quality education. Our foundation bridges critical socio-economic gaps by bringing essential infrastructure and digital solutions directly to underserved communities.
+                    </p>
+                    <p class="text-slate-700 leading-relaxed text-base">
+                        By collaborating with government organizations, Corporate Social Responsibility (CSR) partners, and local leaders, we drive high-impact programs ranging from mobile dialysis units and Poshan nutrition kits to smart learning environments. We aim to nurture self-reliant individuals, foster youth entrepreneurship, and build healthier, educated generations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column (Image Card) -->
+            <div class="lg:col-span-5 flex">
+                <div class="relative group rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-white w-full min-h-[320px] lg:min-h-full">
+                    <img 
+                        src="smart-class.jpg" 
+                        alt="Smart Classroom Digital Learning Initiative" 
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 absolute inset-0"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent flex flex-col justify-end p-6 text-white z-10">
+                        <span class="inline-block px-3 py-1 bg-ngoBrown-600 text-white text-xs font-bold rounded-full w-max mb-2">
+                            <i class="fa-solid fa-chalkboard-user mr-1.5"></i> Smart Class Initiative
+                        </span>
+                        <h4 class="text-xl font-bold">Empowering Schools with Smart Learning</h4>
+                        <p class="text-xs text-slate-300 mt-1">
+                            Integrating digital tools, interactive classrooms, and student infrastructure in underserved schools.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Local Image Banner Section -->
+<div class="mt-6 mb-10 max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="relative overflow-hidden rounded-2xl shadow-xl">
+        <img 
+            src="image.jpg" 
+            alt="FEDME Foundation Community Impact" 
+            class="w-full h-auto max-h-[480px] object-cover object-center mx-auto filter saturate-[1.05] contrast-[1.02]"
+        />
+    </div>
+</div>
+        <!-- Core Vision & Mission Section (Moved Up) -->
+        <div class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Vision Card -->
+                <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-sm border border-slate-200/60 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-ngoBrown-200 rounded-bl-full pointer-events-none z-0"></div>
+                    <div class="relative z-10 space-y-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-ngoBrown-100 text-ngoBrown-800">
+                            <i class="fa-solid fa-eye mr-2"></i> Core Vision
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-slate-900">Nurturing Self-Reliant & Empowered Communities</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Strongly aligned with Digital India as well as Skill India. The organization envisions a bright future where every individual thrives in a healthy, educated, and nutritionally secure environment—fostering sustainable social development and equal opportunities for all.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-100 flex items-center text-ngoBrown-700 font-semibold text-sm relative z-10">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Health, Education, Nutrition & Holistic community empowerment.
+                    </div>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-sm border border-slate-200/60 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-bl-full pointer-events-none z-0"></div>
+                    <div class="relative z-10 space-y-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">
+                            <i class="fa-solid fa-bullseye mr-2"></i> Core Mission
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-slate-900">Driving Change Through Healthcare, Smart Learning & Innovation</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Steadfast in our approach for tech-enabled solutions, the organization strives to realize our vision by deploying accessible healthcare solutions, upgrading school infrastructure with modern smart classes & IT literacy, delivering digital skill training, and ATL labs through an aspirational distribution.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-100 flex items-center text-blue-700 font-semibold text-sm relative z-10">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Preventive healthcare, smart education, & digital skills.
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Compact Image Banner Section -->
+<div class="mt-0 mb-6 max-w-2xl mx-auto px-4 sm:px-6">
+    <div class="relative overflow-hidden rounded-xl shadow-md">
+        <img 
+            src="image1.jpeg" 
+            alt="FEDME Foundation Community Impact" 
+            class="w-full h-auto max-h-[280px] sm:max-h-[320px] object-cover object-center mx-auto filter saturate-[1.05] contrast-[1.02]"
+        />
+    </div>
+</div>
+
+        <!-- 3 Core Pillars (Healthcare, Education, Environment) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Healthcare -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-ngoBrown-100 text-ngoBrown-700 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-kit-medical"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Healthcare & Medical Access</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Deploying mobile dialysis units, safe RO water stations, health checkup camps, and emergency medical assistance to rural communities.
+                    </p>
+                </div>
+                <a href="details.html?cat=healthcare" class="inline-flex items-center text-ngoBrown-700 font-semibold text-sm hover:text-ngoBrown-800 transition">
+                    Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Card 2: Education -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Education & Digital Literacy</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Providing desk-bags and supplies to underprivileged students, alongside IT training, digital marketing skills, and vocational courses.
+                    </p>
+                </div>
+                <a href="details.html?cat=education" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-700 transition">
+                    Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Card 3: Environment -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Environment & Community Care</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Driving plantation campaigns, water conservation awareness, solar energy drives, and social support centers for senior citizens.
+                    </p>
+                </div>
+                <a href="details.html?cat=environment" class="inline-flex items-center text-amber-700 font-semibold text-sm hover:text-amber-800 transition">
+                    Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Aims & Objectives Section -->
+<section id="objectives" class="py-24 bg-slate-800 text-slate-100 relative overflow-hidden">
+    <!-- Glowing Ambient Lights -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-20">
+            <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-ngoBrown-100 text-ngoBrown-800 border border-ngoBrown-200 shadow-sm">
+    <i class="fa-solid fa-bullseye mr-2"></i> Aims and Objectives
+</span>
+            <!-- Main Heading in Electric Blue -->
+            <h2 class="text-3xl sm:text-5xl font-black text-blue-400 tracking-tight">Statutory Objectives</h2>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-medium">
+                As per the supplementary trust deed, FEDME Foundation is committed to executing official aims and objectives for public welfare:
+            </p>
+        </div> 
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Objective 1 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-amber-100 transition-all duration-300">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Poshan Programs</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">To conduct and manage Poshan Programs for nutrition security and child health for the general public at large.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> Health & Nutrition Focus
+                </div>
+            </div>
+ 
+            <!-- Objective 2 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 border border-sky-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-sky-100 transition-all duration-300">
+                        <i class="fa-solid fa-medkit"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Educational & Healthcare Products</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">To provide and arrange essential Educational Products and Healthcare Products for underserved communities.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> Resource Supply Drives
+                </div>
+            </div>
+
+            <!-- Objective 3 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 border border-indigo-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-indigo-100 transition-all duration-300">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Digital & IT Services</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">To help and provide Digital and IT Services, computer education, and technical assistance for needy people.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> Digital Skill Literacy
+                </div>
+            </div>
+
+            <!-- Objective 4 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 border border-blue-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-blue-100 transition-all duration-300">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Scholarships & Financial Aid</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">To give financial assistance by way of studentships, scholarships, stipends, books, uniforms, or meals for needy students.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> Educational Welfare
+                </div>
+            </div>
+
+            <!-- Objective 5 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 border border-rose-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-rose-100 transition-all duration-300">
+                        <i class="fa-solid fa-kit-medical"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Medical Help & Medicines</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">To arrange and provide all types of medical help, medicine & treatment facilities especially for poor and needy people.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> Lifesaving Healthcare Aid
+                </div>
+            </div>
+
+            <!-- Objective 6 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-emerald-100 transition-all duration-300">
+                        <i class="fa-solid fa-hospital-user"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Health & Blood Camps</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">To organize Health Checkup camps, Blood donation camps, Dental camps, mobile clinics, ambulances, and blood banks.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> On-Ground Medical Camps
+                </div>
+            </div>
+
+            <!-- Objective 7 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-purple-100 transition-all duration-300">
+                        <i class="fa-solid fa-hands-holding"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Support Centers & Old Age Homes</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">To provide medical, emotional, & social support by setting up drop-in centers, senior citizen homes, and old-age rehabilitation homes.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> Senior Care & Support
+                </div>
+            </div>
+
+            <!-- Objective 8 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 border border-cyan-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-cyan-100 transition-all duration-300">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Skill Development Training</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">To arrange/provide vocational training, skill gap assessments, digital marketing, and management training for self-employment.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> Livelihood & Self-Reliance
+                </div>
+            </div>
+
+            <!-- Objective 9 -->
+            <div class="group bg-white border border-slate-200/80 p-8 rounded-3xl transition-all duration-300 ease-out shadow-lg hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500 relative overflow-hidden flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 border border-teal-200 flex items-center justify-center text-xl font-bold group-hover:scale-110 group-hover:bg-teal-100 transition-all duration-300">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h4 class="font-extrabold text-blue-600 text-xl group-hover:text-blue-700 transition-colors">Environmental Conservation</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Organize camps on 'Grow more plants', 'Save Mother Earth', 'Water Conservation', 'Solar Energy', and climate change awareness.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-slate-500 flex items-center">
+                    <i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> Eco-Friendly Habitats
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Key Initiatives & Projects (All 8 Flagship Projects) -->
+    <section id="initiatives" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-ngoBrown-100 text-ngoBrown-800 border border-ngoBrown-200">
+                    <i class="fa-solid fa-star mr-2"></i> Flagship Projects
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-600 tracking-tight">Key Initiatives</h2>
+                <p class="text-slate-800 text-base sm:text-lg leading-relaxed font-medium">
+Transforming lives at the grassroots through sustainable and scalable initiatives.  
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Project 1: Education Bags with Desk -->
+                <div class="relative group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-80 flex flex-col justify-between border border-slate-200">
+                    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 scale-110 group-hover:scale-100 bg-slate-900" style="background-image: url('education-bags.jpeg');">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-900/90 text-white p-3 text-center text-xs font-bold backdrop-blur-sm">
+                            Education Bags with Desk
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between group-hover:opacity-0 transition-opacity duration-300">
+                        <div>
+                            <div class="w-12 h-12 bg-ngoBrown-100 text-ngoBrown-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Education Bags with Desk</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Providing foundational infrastructure and smart learning tools for students in underserved schools.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs font-bold text-ngoBrown-700 group-hover:opacity-0 transition-opacity duration-300">
+                        Focus: Student Infrastructure
+                    </div>
+                </div>
+
+                <!-- Project 2: AAROGYA RATH (R.O) -->
+                <div class="relative group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-80 flex flex-col justify-between border border-slate-200">
+                    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 scale-110 group-hover:scale-100 bg-slate-900" style="background-image: url('aarogya-rath.jpg');">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-900/90 text-white p-3 text-center text-xs font-bold backdrop-blur-sm">
+                            AAROGYA RATH (R.O)
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between group-hover:opacity-0 transition-opacity duration-300">
+                        <div>
+                            <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-droplet"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">AAROGYA RATH (R.O)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Clean drinking water supply infrastructure serving targeted rural communities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs font-bold text-blue-700 group-hover:opacity-0 transition-opacity duration-300">
+                        Focus: Safe Water Supply
+                    </div>
+                </div>
+
+                <!-- Project 3: Open Gym -->
+                <div class="relative group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-80 flex flex-col justify-between border border-slate-200">
+                    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 scale-110 group-hover:scale-100 bg-slate-900" style="background-image: url('gym.jpg');">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-900/90 text-white p-3 text-center text-xs font-bold backdrop-blur-sm">
+                            Open Gym Initiative
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between group-hover:opacity-0 transition-opacity duration-300">
+                        <div>
+                            <div class="w-12 h-12 bg-ngoBrown-100 text-ngoBrown-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Open Gym</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Promoting community fitness and preventive healthcare access in public spaces.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs font-bold text-ngoBrown-700 group-hover:opacity-0 transition-opacity duration-300">
+                        Focus: Public Health & Fitness
+                    </div>
+                </div>
+
+                <!-- Project 4: Kuposhan Mukt Bharat -->
+                <div class="relative group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-80 flex flex-col justify-between border border-slate-200">
+                    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 scale-110 group-hover:scale-100 bg-slate-900" style="background-image: url('kuposhan.jpeg');">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-900/90 text-white p-3 text-center text-xs font-bold backdrop-blur-sm">
+                            Kuposhan Mukt Bharat
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between group-hover:opacity-0 transition-opacity duration-300">
+                        <div>
+                            <div class="w-12 h-12 bg-pink-100 text-pink-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-apple-whole"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Kuposhan Mukt Bharat</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Combating malnutrition through specialized nutritional kits distributed across schools and Anganwadis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs font-bold text-pink-700 group-hover:opacity-0 transition-opacity duration-300">
+                        Focus: Poshan Kits & Nutrition
+                    </div>
+                </div>
+
+                <!-- Project 5: Mobile Dialysis Unit (MMU) -->
+                <div class="relative group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-80 flex flex-col justify-between border border-slate-200">
+                    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 scale-110 group-hover:scale-100 bg-slate-900" style="background-image: url('mmu.png');">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-900/90 text-white p-3 text-center text-xs font-bold backdrop-blur-sm">
+                            Mobile Dialysis Unit (MMU)
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between group-hover:opacity-0 transition-opacity duration-300">
+                        <div>
+                            <div class="w-12 h-12 bg-rose-100 text-rose-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-truck-medical"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Mobile Dialysis Unit (MMU)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Bringing critical, life-saving renal care and medical infrastructure directly to remote locations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs font-bold text-rose-700 group-hover:opacity-0 transition-opacity duration-300">
+                        Focus: Critical Medical Care
+                    </div>
+                </div>
+
+                <!-- Project 6: Atal Tinkering Lab (ATL) -->
+                <div class="relative group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-80 flex flex-col justify-between border border-slate-200">
+                    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 scale-110 group-hover:scale-100 bg-slate-900" style="background-image: url('atl.JPG');">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-900/90 text-white p-3 text-center text-xs font-bold backdrop-blur-sm">
+                            Atal Tinkering Lab (ATL)
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between group-hover:opacity-0 transition-opacity duration-300">
+                        <div>
+                            <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Atal Tinkering Lab (ATL)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Fostering scientific temperament, creativity, and hands-on innovation skills among school students.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs font-bold text-indigo-700 group-hover:opacity-0 transition-opacity duration-300">
+                        Focus: STEM & Innovation
+                    </div>
+                </div>
+
+                <!-- Project 7: Anemia Mukt Bharat -->
+                <div class="relative group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-80 flex flex-col justify-between border border-slate-200">
+                    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 scale-110 group-hover:scale-100 bg-slate-900" style="background-image: url('anemia.jpg');">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-900/90 text-white p-3 text-center text-xs font-bold backdrop-blur-sm">
+                            Anemia Mukt Bharat
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between group-hover:opacity-0 transition-opacity duration-300">
+                        <div>
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Anemia Mukt Bharat</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Targeted health camps, screening, and treatment modules addressing iron-deficiency anemia.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs font-bold text-emerald-700 group-hover:opacity-0 transition-opacity duration-300">
+                        Focus: Health Screening
+                    </div>
+                </div>
+
+                <!-- Project 8: Mental Healthcare -->
+                <div class="relative group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-80 flex flex-col justify-between border border-slate-200">
+                    <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 scale-110 group-hover:scale-100 bg-slate-900" style="background-image: url('mental.jpg');">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-900/90 text-white p-3 text-center text-xs font-bold backdrop-blur-sm">
+                            Mental Healthcare
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between group-hover:opacity-0 transition-opacity duration-300">
+                        <div>
+                            <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">Mental Healthcare</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Mental well-being that enables people to cope with the stresses of life, realize their abilities, learn and work well.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs font-bold text-blue-700 group-hover:opacity-0 transition-opacity duration-300">
+                        Focus: Emotional & Psychological Well-being
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Footer / Contact Section -->
+    <footer id="contact" class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-ngoBrown-400">FEDME Foundation</h3>
+                    
+                    <!-- Contact Info Details (Lucknow Address Included) -->
+                    <div class="space-y-2.5 pt-2 text-sm text-slate-300">
+                        <!-- Address -->
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-ngoBrown-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-xs leading-relaxed text-slate-300">
+                                317, Sector-8, Indira Nagar, Lucknow, U.P-226016, India
+                            </span>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-ngoBrown-400 flex-shrink-0"></i>
+                            <a href="tel:+919876543210" class="text-xs text-slate-300 hover:text-ngoBrown-400 transition">
+                                +91 XXX XXXX XXX
+                            </a>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-ngoBrown-400 flex-shrink-0"></i>
+                            <a href="mailto:digimarkentre@gmail.com" class="text-xs text-slate-300 hover:text-ngoBrown-400 transition">
+                                digimarkentre@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#about" class="hover:text-ngoBrown-400 transition">About Trust</a></li>
+                        <li><a href="#initiatives" class="hover:text-ngoBrown-400 transition">Our Programs</a></li>
+                        <li><a href="#gallery" class="hover:text-ngoBrown-400 transition">Gallery</a></li> 
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-white">Our works</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li>Healthcare & Dialysis Units</li>
+                        <li>Smart Classrooms & IT Literacy</li>
+                        <li>Environmental Conservation</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-white">Get Involved</h3>
+                    <p class="text-slate-400 text-sm">Partner with us for CSR implementations and community welfare programs.</p>
+                    <button onclick="openModal()" class="inline-block px-4 py-2 bg-ngoBrown-600 hover:bg-ngoBrown-700 text-white text-sm font-semibold rounded-lg transition">
+                        Get Involved / Donate
+                    </button>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                &copy; 2026 Foundation for Empowering Digital Marketing and Entrepreneurship (FEDME). All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get Involved / Donation Modal Form -->
+    <div id="getInvolvedModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-slate-100 my-8">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 transition">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="text-center space-y-2 mb-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-ngoBrown-100 text-ngoBrown-800">
+                    <i class="fa-solid fa-heart mr-1.5"></i> Support Our Mission
+                </span>
+                <h3 class="text-2xl font-extrabold text-slate-900">Get Involved with FEDME</h3>
+                <p class="text-slate-500 text-sm">Fill out the details below to support our initiatives, volunteer, or partner for CSR.</p>
+            </div>
+
+            <!-- Form -->
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                
+                <!-- Involvement Type -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">I want to:</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="involvement_type" value="Donate" class="peer hidden" checked onchange="toggleDonationField(true)">
+                            <div class="p-2.5 text-center border border-slate-200 rounded-xl peer-checked:border-ngoBrown-600 peer-checked:bg-ngoBrown-50 peer-checked:text-ngoBrown-800 text-xs font-bold text-slate-600 transition">
+                                <i class="fa-solid fa-hand-holding-dollar block text-base mb-1"></i> Donate
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="involvement_type" value="Volunteer" class="peer hidden" onchange="toggleDonationField(false)">
+                            <div class="p-2.5 text-center border border-slate-200 rounded-xl peer-checked:border-ngoBrown-600 peer-checked:bg-ngoBrown-50 peer-checked:text-ngoBrown-800 text-xs font-bold text-slate-600 transition">
+                                <i class="fa-solid fa-user-plus block text-base mb-1"></i> Volunteer
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="involvement_type" value="Partner" class="peer hidden" onchange="toggleDonationField(false)">
+                            <div class="p-2.5 text-center border border-slate-200 rounded-xl peer-checked:border-ngoBrown-600 peer-checked:bg-ngoBrown-50 peer-checked:text-ngoBrown-800 text-xs font-bold text-slate-600 transition">
+                                <i class="fa-solid fa-building-flag block text-base mb-1"></i> Partner
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Full Name -->
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Full Name</label>
+                    <input type="text" required placeholder="John Doe" class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-ngoBrown-500 focus:bg-white transition">
+                </div>
+
+                <!-- Email & Phone Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Email Address *</label>
+                        <input type="email" required placeholder="john@example.com" class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-ngoBrown-500 focus:bg-white transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Phone Number *</label>
+                        <input type="tel" required placeholder="+91 9876543210" class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-ngoBrown-500 focus:bg-white transition">
+                    </div>
+                </div>
+
+                <!-- Donation Amount Field (Conditional) -->
+                <div id="donationAmountGroup">
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Donation Amount (INR) *</label>
+                    <div class="grid grid-cols-4 gap-2 mb-2">
+                        <button type="button" onclick="setAmount(500)" class="py-1.5 border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 hover:bg-ngoBrown-50 hover:border-ngoBrown-400">₹500</button>
+                        <button type="button" onclick="setAmount(1000)" class="py-1.5 border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 hover:bg-ngoBrown-50 hover:border-ngoBrown-400">₹1,000</button>
+                        <button type="button" onclick="setAmount(5000)" class="py-1.5 border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 hover:bg-ngoBrown-50 hover:border-ngoBrown-400">₹5,000</button>
+                        <button type="button" onclick="setAmount(10000)" class="py-1.5 border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 hover:bg-ngoBrown-50 hover:border-ngoBrown-400">₹10,000</button>
+                    </div>
+                    <input type="number" id="customAmount" placeholder="Or enter custom amount" class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-ngoBrown-500 focus:bg-white transition">
+                </div>
+
+                <!-- Message / Note -->
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Message / Key Interest Area (Optional)</label>
+                    <textarea rows="2" placeholder="Tell us how you would like to contribute..." class="w-full px-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-ngoBrown-500 focus:bg-white transition"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full py-3.5 bg-ngoBrown-600 hover:bg-ngoBrown-700 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center">
+                    Submit Request <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mobile Menu & Modal Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const modal = document.getElementById('getInvolvedModal');
+        const donationGroup = document.getElementById('donationAmountGroup');
+        const amountInput = document.getElementById('customAmount');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleDonationField(show) {
+            if (show) {
+                donationGroup.classList.remove('hidden');
+            } else {
+                donationGroup.classList.add('hidden');
+            }
+        }
+
+        function setAmount(value) {
+            amountInput.value = value;
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for getting involved! Our team will contact you shortly.');
+            closeModal();
+        }
+
+        // Close modal when clicking outside of modal box
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
